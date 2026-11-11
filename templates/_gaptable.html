@@ -1,0 +1,16 @@
+{% set g = data.gap %}
+<table class="gap-table">
+  <caption>{{ g.caption[lang] }}</caption>
+  <thead>
+    <tr><th scope="col"></th><th scope="col">{{ g.cols.climate[lang] }}</th><th scope="col">{{ g.cols.nature[lang] }}</th></tr>
+  </thead>
+  <tbody>
+    {% for r in g.rows %}
+    <tr>
+      <th scope="row">{{ r.label[lang] }}</th>
+      <td><span class="status status-{{ r.climate }}">{{ g.status[r.climate][lang] }}</span></td>
+      <td><span class="status status-{{ r.nature }}">{{ g.status[r.nature][lang] }}</span></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

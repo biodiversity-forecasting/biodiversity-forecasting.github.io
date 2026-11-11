@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{% if page.layout != 'home' %}{{ page.title }} – {% endif %}{{ ui.site_name }}</title>
+<meta name="description" content="{{ page.description or ui.tagline }}">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.description or ui.tagline }}">
+<meta property="og:locale" content="{{ 'nn_NO' if lang == 'nn' else 'en_GB' }}">
+{% for l, t in translations.items() %}
+<link rel="alternate" hreflang="{{ l }}" href="{{ (base_url ~ t.url) if base_url else rel(t.url) }}">
+{% endfor %}
+<link rel="icon" type="image/png" href="{{ rel('/img/logo/favicon.png') }}">
+{% if fonts == 'google' %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400..700;1,400&display=swap">
+{% else %}
+<link rel="stylesheet" href="{{ rel('/fonts/fonts.css') }}">
+{% endif %}
+<link rel="stylesheet" href="{{ rel('/css/style.css') }}">
+</head>
+<body class="layout-{{ page.layout }} variant-{{ variant }}">
+<a class="skip" href="#innhald">{{ ui.skip }}</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ page_url('home') }}" aria-label="{{ ui.site_name }} – {{ ui.home }}">
+      <img class="logo logo-dark-text" src="{{ rel('/img/logo/cbf-logo-' ~ lang ~ '.svg') }}" alt="{{ ui.site_name }}" width="300" height="75">
+      <img class="logo logo-light-text" src="{{ rel('/img/logo/cbf-logo-' ~ lang ~ '-white.svg') }}" alt="" width="300" height="75">
+    </a>
+    <div class="header-tools">
+      {% for l, t in translations.items() if l != lang %}
+      <a class="lang-switch" href="{{ rel(t.url) }}" hreflang="{{ l }}" lang="{{ l }}">{{ ui.other_lang_label }}</a>
+      {% endfor %}
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="hovudmeny">{{ ui.menu }}</button>
+    </div>
+  </div>
+  <nav class="main-nav" id="hovudmeny" aria-label="{{ ui.menu }}">
+    <ul class="wrap">
+      {% for item in site.menu[lang] if has_page(item.key) %}
+      {% set active = page.key == item.key or (page.parent == item.key) %}
+      <li><a href="{{ page_url(item.key) }}"{% if active %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
+
+<main id="innhald">
+{% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <img class="footer-logo" src="{{ rel('/img/logo/cbf-logo-' ~ lang ~ '-white.svg') }}" alt="{{ ui.site_name }}" width="260" height="65">
+      <p>{{ ui.footer_about }}</p>
+    </div>
+    <div>
+      <h2 class="eyebrow">{{ ui.contact }}</h2>
+      <p>{{ ui.host }}<br>NTNU, 7491 Trondheim</p>
+      <p><a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></p>
+    </div>
+    <div>
+      <h2 class="eyebrow">{{ ui.short_name }} {{ ui.period }}</h2>
+      <ul class="footer-links">
+        {% for item in site.menu[lang] if has_page(item.key) %}<li><a href="{{ page_url(item.key) }}">{{ item.label }}</a></li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>{{ ui.funded }}</span>
+    <span>{{ ui.privacy }}</span>
+    <span>© {{ year }} NTNU</span>
+  </div>
+</footer>
+<script>
+(function () {
+  var b = document.querySelector('.menu-toggle'), n = document.getElementById('hovudmeny');
+  if (!b || !n) return;
+  b.addEventListener('click', function () {
+    var open = b.getAttribute('aria-expanded') === 'true';
+    b.setAttribute('aria-expanded', String(!open));
+    n.classList.toggle('open', !open);
+  });
+})();
+</script>
+</body>
+</html>

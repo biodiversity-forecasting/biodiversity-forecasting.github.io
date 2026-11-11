@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow on-dark">{{ page.hero.eyebrow }}</p>
+      <h1>{{ page.hero.title }}</h1>
+      <p class="lead">{{ page.hero.lead }}</p>
+      <div class="actions">
+        {% for b in page.hero.buttons %}
+        <a class="btn {{ 'btn-primary' if loop.first else 'btn-ghost' }}" href="{{ page_url(b.key) }}">{{ b.label }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    <figure class="hero-img">
+      <img src="{{ rel('/img/photos/krystallkule.jpg') }}" alt="{{ page.hero.image_alt }}" width="1600" height="1414">
+    </figure>
+  </div>
+  {% include "_fan.html" %}
+</section>
+
+<section class="band">
+  <div class="wrap split">
+    <div class="split-text">
+      <p class="eyebrow">{{ page.gap.eyebrow }}</p>
+      <h2>{{ page.gap.title }}</h2>
+      {{ page.gap.text | md }}
+    </div>
+    <div class="split-aside">
+      {% include "_gaptable.html" %}
+    </div>
+  </div>
+</section>
+
+<section class="band band-tint">
+  <div class="wrap">
+    <p class="eyebrow">{{ page.areas.eyebrow }}</p>
+    <h2>{{ page.areas.title }}</h2>
+    <p class="section-lead">{{ page.areas.lead }}</p>
+    {% include "_areas.html" %}
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">{{ page.deliverables.eyebrow }}</p>
+    <h2>{{ page.deliverables.title }}</h2>
+    <ul class="deliverables">
+      {% for d in page.deliverables['items'] %}
+      <li><strong>{{ d.title }}</strong><span>{{ d.text }}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="band band-dark">
+  <div class="wrap">
+    <h2 class="visually-hidden">{{ page.numbers_title }}</h2>
+    <dl class="numbers">
+      {% for n in page.numbers %}
+      <div><dt>{{ n.label }}</dt><dd>{{ n.value }}</dd></div>
+      {% endfor %}
+    </dl>
+  </div>
+</section>
+
+{% if has_page('cases') %}
+<section class="band">
+  <div class="wrap split split-media">
+    <figure class="map-fig"><img src="{{ rel('/img/figures/casar.png') }}" alt="{{ page.cases.image_alt }}"></figure>
+    <div class="split-text">
+      <p class="eyebrow">{{ page.cases.eyebrow }}</p>
+      <h2>{{ page.cases.title }}</h2>
+      {{ page.cases.text | md }}
+      <p><a class="arrow-link" href="{{ page_url('cases') }}">{{ ui.read_more }}</a></p>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if publications and has_page('publications') %}
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">{{ ui.latest_pubs }}</p>
+    {% if nva_sample %}<p class="note sample-note">{{ 'Døme: publikasjonane her er henta frå Hotspots-prosjektet og viser berre korleis lista vil sjå ut.' if lang == 'nn' else 'Example: these publications are from the Hotspots project and only show how the list will look.' }}</p>{% endif %}
+    <ul class="pub-list pub-grid">
+      {% for p in publications[:3] %}{% include "_pub.html" %}{% endfor %}
+    </ul>
+    <p><a class="arrow-link" href="{{ page_url('publications') }}">{{ ui.all_pubs }}</a></p>
+  </div>
+</section>
+{% endif %}
+
+<section class="band band-tint">
+  <div class="wrap news-row">
+    <div class="news-latest">
+      <p class="eyebrow">{{ page.news_title }}</p>
+      <ul class="news-list compact">
+        {% for n in news(lang, 3) %}
+        <li>
+          <time datetime="{{ n.date }}">{{ fmt_date(n.date, lang) }}</time>
+          <a href="{{ rel(n.url) }}">{{ n.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      <p><a class="arrow-link" href="{{ page_url('news') }}">{{ ui.all_news }}</a></p>
+      {% include "_linkedin.html" %}
+    </div>
+    <aside class="callout">
+      <p class="eyebrow">{{ page.event.eyebrow }}</p>
+      <h2>{{ page.event.title }}</h2>
+      <p class="callout-date">{{ page.event.date }}</p>
+      <p>{{ page.event.text }}</p>
+      {% if page.event.key %}<a class="btn btn-primary" href="{{ page_url(page.event.key) }}">{{ ui.read_more }}</a>{% endif %}
+    </aside>
+  </div>
+</section>
+
+<section class="band join-band">
+  <div class="wrap join-inner">
+    <div>
+      <h2>{{ page.join.title }}</h2>
+      <p>{{ page.join.text }}</p>
+    </div>
+    <a class="btn btn-primary" href="{{ page_url('join') }}">{{ page.join.button }}</a>
+  </div>
+</section>
+{% endblock %}

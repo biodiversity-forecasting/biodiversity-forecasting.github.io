@@ -1,0 +1,15 @@
+{% extends "page.html" %}
+{% block after %}
+<section class="wrap prose-wrap">
+  <ul class="news-list">
+    {% for n in news(lang) %}
+    <li>
+      <time datetime="{{ n.date }}">{{ fmt_date(n.date, lang) }}</time>
+      <h2><a href="{{ rel(n.url) }}">{{ n.title }}</a></h2>
+      {% if n.description %}<p>{{ n.description }}</p>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% include "_linkedin.html" %}
+</section>
+{% endblock %}

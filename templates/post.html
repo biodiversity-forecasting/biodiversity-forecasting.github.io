@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="wrap prose-wrap post">
+  <p class="eyebrow"><a href="{{ page_url('news') }}">{{ page.parent_label }}</a> · <time datetime="{{ page.date }}">{{ fmt_date(page.date, lang) }}</time></p>
+  <h1>{{ page.title }}</h1>
+  {% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+  {% if page.image %}<figure class="post-img"><img src="{{ rel('/img/' ~ page.image) }}" alt="{{ page.image_alt or '' }}"></figure>{% endif %}
+  <div class="prose">{{ page.body_html | safe }}</div>
+</article>
+{% endblock %}

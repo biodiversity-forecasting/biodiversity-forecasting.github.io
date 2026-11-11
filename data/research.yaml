@@ -1,0 +1,37 @@
+# Dei fem forskingsområda. Lengre tekst ligg i content/<språk>/forsking/ og content/en/research/.
+areas:
+  - id: ra4
+    code: RA4
+    icon: ra4.png
+    key: ra4
+    name: {nn: Informasjonsarenaen, en: Information arena}
+    short: {nn: "Opne data om artar og miljø vert til kart med usikkerheit.", en: "Open data on species and environment become maps with uncertainty."}
+    leader: Bob O’Hara
+  - id: ra1
+    code: RA1
+    icon: ra1.png
+    key: ra1
+    name: {nn: Prognosar, en: Forecasts}
+    short: {nn: "Prosessbaserte modellar viser korleis naturen utviklar seg under ulike val.", en: "Process-based models show how nature develops under different choices."}
+    leader: Nigel Yoccoz
+  - id: ra2
+    code: RA2
+    icon: ra2.png
+    key: ra2
+    name: {nn: Indikatorar og rapportering, en: Indicators and reporting}
+    short: {nn: "Ein felles målestokk for naturen, frå gen til økosystem.", en: "A common yardstick for nature, from genes to ecosystems."}
+    leader: Aline Lee
+  - id: ra3
+    code: RA3
+    icon: ra3.png
+    key: ra3
+    name: {nn: Frå prognose til handling, en: From forecast to action}
+    short: {nn: "Dashbord og verktøy som vert brukte i planar, budsjett og investeringar.", en: "Dashboards and tools used in plans, budgets and investments."}
+    leader: Marianne Ryghaug
+  - id: ra5
+    code: RA5
+    icon: ra5.png
+    key: ra5
+    name: {nn: Kunnskapsarenaen, en: Knowledge arena}
+    short: {nn: "Utdanning, folkeforsking og møteplassar der forsking og samfunn møtest.", en: "Education, citizen science and meeting places where research and society meet."}
+    leader: Ivar Herfindal

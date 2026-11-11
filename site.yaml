@@ -1,0 +1,110 @@
+# Grunninnstillingar for nettsida.
+# base_url og domain fyller de inn når domenet er klart (t.d. https://naturprognosar.no).
+base_url: ""
+domain: ""          # skriv domenet her (utan https://) når det er klart; då vert CNAME-fila laga automatisk
+variant: dark       # dark = djupblå toppfelt og talband, light = lyse flater
+fonts: local        # local = sjølvhosta Open Sans (lastast ned i GitHub Actions)
+
+languages: [nn, en]
+
+news_section:
+  nn: aktuelt
+  en: news
+
+contact_email: anders.finstad@ntnu.no
+
+months:
+  nn: [januar, februar, mars, april, mai, juni, juli, august, september, oktober, november, desember]
+  en: [January, February, March, April, May, June, July, August, September, October, November, December]
+
+menu:
+  nn:
+    - {key: about, label: Om senteret}
+    - {key: research, label: Forsking}
+    - {key: publications, label: Publikasjonar}
+    - {key: cases, label: Casar}
+    - {key: people, label: Folk og partnarar}
+    - {key: news, label: Aktuelt}
+    - {key: join, label: Bli med}
+  en:
+    - {key: about, label: About}
+    - {key: research, label: Research}
+    - {key: publications, label: Publications}
+    - {key: cases, label: Case regions}
+    - {key: people, label: People and partners}
+    - {key: news, label: News}
+    - {key: join, label: Get involved}
+
+ui:
+  nn:
+    site_name: Senter for naturprognosar
+    short_name: CBF
+    tagline: Prognosar for naturen – grunnlag for betre avgjerder
+    skip: Hopp til innhaldet
+    menu: Meny
+    lang_name: Nynorsk
+    other_lang_label: English
+    home: Heim
+    host: Senteret er leidd av NTNU Gjærevollsenteret
+    funded: Finansiert av Noregs forskingsråd
+    contact: Kontakt
+    read_more: Les meir
+    all_news: Alle nyhende
+    leader: Leiar
+    published: Publisert
+    period: 2026–2034
+    back_to: Tilbake til
+    footer_about: Senter for naturprognosar (Centre for Biodiversity Forecasting, CBF) utviklar prognosar for korleis arealbruk på land og i sjø formar naturen i morgon.
+    privacy: Denne nettsida brukar ikkje informasjonskapslar og samlar ikkje inn personopplysningar.
+    li_title: Frå LinkedIn
+    latest_pubs: Siste publikasjonar
+    all_pubs: Alle publikasjonar
+    nva_link: Sjå prosjektet i Nasjonalt vitenarkiv (NVA)
+    et_al: mfl.
+    li_follow: Følg oss på LinkedIn
+    li_load: Vis innlegget
+    li_note: Innlegget vert henta frå LinkedIn, som kan setja informasjonskapslar.
+  en:
+    site_name: Centre for Biodiversity Forecasting
+    short_name: CBF
+    tagline: Forecasting nature – a basis for better decisions
+    skip: Skip to content
+    menu: Menu
+    lang_name: English
+    other_lang_label: Nynorsk
+    home: Home
+    host: Hosted by the NTNU Gjærevoll Centre
+    funded: Funded by the Research Council of Norway
+    contact: Contact
+    read_more: Read more
+    all_news: All news
+    leader: Lead
+    published: Published
+    period: 2026–2034
+    back_to: Back to
+    footer_about: The Centre for Biodiversity Forecasting (CBF) develops forecasts of how land and sea use today shapes the nature of tomorrow.
+    privacy: This website uses no cookies and collects no personal data.
+    li_title: From LinkedIn
+    latest_pubs: Latest publications
+    all_pubs: All publications
+    nva_link: See the project in the Norwegian Research Archive (NVA)
+    et_al: et al.
+    li_follow: Follow us on LinkedIn
+    li_load: Show post
+    li_note: The post is loaded from LinkedIn, which may set cookies.
+
+# Publikasjonar frå Nasjonalt vitenarkiv (NVA).
+# Skriv inn ID-en til CBF-prosjektet i NVA (talet i adressa nva.sikt.no/projects/<ID>).
+# Prosjektet kan registrerast i NVA før NFR-prosjektnummeret er klart. Så lenge lista er tom, er publikasjonssida skjult.
+nva:
+  projects: []      # t.d. [2769822]
+
+# LinkedIn. Skriv inn adressa til LinkedIn-sida til senteret.
+# Under posts legg de inn innlegg de vil visa: opna innlegget på LinkedIn, vel «…» → «Bygg inn dette innlegget»,
+# og kopier koden som ser ut som urn:li:share:7262... (eller urn:li:activity:...).
+# Innlegga vert fyrst lasta når den besøkjande klikkar (personvern: LinkedIn set informasjonskapslar).
+linkedin:
+  url: "https://www.linkedin.com/company/centre-for-biodiversity-forecasting/"
+  posts: []
+  # posts:
+  #   - urn: "urn:li:share:7262000000000000000"

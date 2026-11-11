@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-head{% if page.image %} has-image{% endif %}">
+  <div class="wrap page-head-inner">
+    <div class="page-head-text">
+      {% if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
+      <h1>{{ page.title }}</h1>
+      {% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+    </div>
+    {% if page.image %}
+    <figure class="page-head-img"><img src="{{ rel('/img/' ~ page.image) }}" alt="{{ page.image_alt or '' }}"></figure>
+    {% endif %}
+  </div>
+</section>
+{% if page.body_html | trim %}
+<article class="wrap prose-wrap">
+  <div class="prose">
+    {{ page.body_html | safe }}
+  </div>
+</article>
+{% endif %}
+{% block after %}{% endblock %}
+{% endblock %}

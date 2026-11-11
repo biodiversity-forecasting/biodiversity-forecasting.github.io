@@ -1,0 +1,57 @@
+# Byggjer nettsida og publiserer ho på GitHub Pages kvar gong noko vert endra i main.
+name: Publiser nettsida
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 * * 1"   # kvar måndag morgon: hentar nye publikasjonar frå NVA
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer Python-pakkar
+        run: pip install -r requirements.txt
+
+      - name: Hent skrifta Open Sans (sjølvhosta)
+        run: |
+          npm pack @fontsource-variable/open-sans@5 --silent
+          tar xzf fontsource-variable-open-sans-*.tgz
+          cp package/files/open-sans-latin-wght-normal.woff2 static/fonts/
+          cp package/files/open-sans-latin-wght-italic.woff2 static/fonts/
+
+      - name: Bygg sida
+        run: python build.py
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

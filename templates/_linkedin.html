@@ -1,0 +1,29 @@
+{% set li = site.linkedin %}
+{% if li and (li.url or li.posts) %}
+<section class="linkedin" aria-labelledby="li-title">
+  <div class="linkedin-head">
+    <h2 id="li-title" class="eyebrow">{{ ui.li_title }}</h2>
+    {% if li.url %}<a class="btn btn-li" href="{{ li.url }}" rel="noopener">{{ ui.li_follow }}</a>{% endif %}
+  </div>
+  {% if li.posts %}
+  <ul class="li-posts">
+    {% for p in li.posts %}
+    <li class="li-post" data-src="https://www.linkedin.com/embed/feed/update/{{ p.urn }}">
+      {% if p.text %}<p>{{ p.text }}</p>{% endif %}
+      <button type="button" class="btn btn-outline li-load">{{ ui.li_load }}</button>
+      <p class="li-note">{{ ui.li_note }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  <script>
+  document.querySelectorAll('.li-post').forEach(function (el) {
+    el.querySelector('.li-load').addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = el.dataset.src; f.title = 'LinkedIn'; f.loading = 'lazy'; f.allowFullscreen = true;
+      el.innerHTML = ''; el.appendChild(f); el.classList.add('loaded');
+    });
+  });
+  </script>
+  {% endif %}
+</section>
+{% endif %}

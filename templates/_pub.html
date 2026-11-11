@@ -1,0 +1,7 @@
+{# Éin publikasjon frå NVA #}
+<li class="pub">
+  <span class="pub-type">{{ p.type[lang] }}{% if p.year %} · {{ p.year }}{% endif %}</span>
+  <a class="pub-title" href="{{ p.link }}" rel="noopener">{{ p.title }}</a>
+  <span class="pub-authors">{% if p.authors | length > 6 %}{{ p.authors[:6] | join(', ') }} {{ ui.et_al }}{% else %}{{ p.authors | join(', ') }}{% endif %}</span>
+  {% if p.venue %}<span class="pub-venue">{{ p.venue }}</span>{% endif %}
+</li>

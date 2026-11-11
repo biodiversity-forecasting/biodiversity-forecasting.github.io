@@ -1,0 +1,57 @@
+# Partnarar. Logoar ligg i static/img/partners/. Legg til nye ved å kopiera ei linje.
+groups:
+  - id: research
+    title: {nn: Forskingspartnarar, en: Research partners}
+    items:
+      - {name: NTNU, logo: p62.png}
+      - {name: UiT Noregs arktiske universitet, logo: p63.png}
+      - {name: Universitetet i Oslo, logo: p64.png}
+      - {name: Nord universitet, logo: p65.png}
+      - {name: SINTEF, logo: p66.png}
+      - {name: Statistisk sentralbyrå, logo: p67.png}
+      - {name: University of St Andrews (CREEM), logo: p68.png}
+  - id: users
+    title: {nn: Brukarpartnarar, en: User partners}
+    items:
+      - {name: Finansdepartementet, logo: p69.png}
+      - {name: Trøndelag fylkeskommune, logo: p70.png}
+      - {name: Høylandet kommune, logo: p71.png}
+      - {name: Frøya kommune, logo: p72.png}
+      - {name: Artsdatabanken, logo: p73.png}
+      - {name: DNV, logo: p74.png}
+      - {name: SEBAN, logo: p75.png}
+      - {name: SalMar, logo: p76.png}
+      - {name: ScaleAQ, logo: p77.png}
+      - {name: Norsk Kylling, logo: p78.png}
+      - {name: NORSØK, logo: p79.png}
+      - {name: Mausund feltstasjon / Eider AS, logo: p80.png}
+      - {name: Statskog, logo: p81.png}
+      - {name: Finnmarkseiendommen (FeFo), logo: p82.png}
+      - {name: Allskog, logo: p83.png}
+      - {name: Nidaros Sparebank, logo: p84.png}
+      - {name: SpareBank 1 SMN, logo: p85.png}
+      - {name: Finans Norge, logo: p86.png}
+      - {name: Finansforbundet, logo: p87.png}
+      - {name: WWF, logo: p88.png}
+      - {name: SABIMA, logo: p89.png}
+  - id: reference
+    title: {nn: Referansegruppe (direktorat), en: Reference group (directorates)}
+    items:
+      - {name: Miljødirektoratet, logo: p90.png}
+      - {name: NVE, logo: p91.png}
+      - {name: Landbruksdirektoratet, logo: p92.png}
+  - id: international
+    title: {nn: Internasjonalt samarbeid, en: International collaboration}
+    items:
+      - {name: Québec Centre for Biodiversity Science (QCBS), logo: p93.png}
+      - {name: CBAS, Chinese Academy of Sciences, logo: p94.png}
+      - {name: University of Melbourne (QAEco), logo: p95.png}
+      - {name: Pentland Centre, Lancaster University, logo: p96.png}
+      - {name: UK Centre for Ecology & Hydrology, logo: p97.png}
+      - {name: University of Copenhagen, logo: p98.png}
+      - {name: Aalto University, logo: p99.png}
+      - {name: SIG, logo: p100.png}
+      - {name: University of Edinburgh, logo: p101.png}
+      - {name: University of Jyväskylä}
+
+sister_projects: [TRACE, InterPlay, AID, COAT]

@@ -1,0 +1,39 @@
+{% extends "page.html" %}
+{% block after %}
+{% for g in data.people.groups %}
+<section class="band{% if loop.index is even %} band-tint{% endif %}" id="{{ g.id }}">
+  <div class="wrap">
+    <h2>{{ g.title[lang] }}</h2>
+    {% if g.note %}<p class="section-lead">{{ g.note[lang] }}</p>{% endif %}
+    <ul class="people-grid">
+      {% for p in g.people %}
+      <li class="person">
+        <img src="{{ rel('/img/people/' ~ p.photo) }}" alt="" width="400" height="400" loading="lazy">
+        <strong>{{ p.name }}</strong>
+        {% if p.role %}<span class="person-role">{{ p.role[lang] }}</span>{% endif %}
+        <span class="person-org">{{ p.org }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endfor %}
+
+<section class="band" id="partnarar">
+  <div class="wrap">
+    <h2>{{ page.partners_title }}</h2>
+    {% for g in data.partners.groups %}
+    <h3 class="eyebrow partner-head">{{ g.title[lang] }}</h3>
+    <ul class="logo-grid">
+      {% for p in g['items'] %}
+      <li title="{{ p.name }}">
+        {% if p.logo %}<img src="{{ rel('/img/partners/' ~ p.logo) }}" alt="{{ p.name }}" loading="lazy">{% else %}<span>{{ p.name }}</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+    <h3 class="eyebrow partner-head">{{ page.sister_title }}</h3>
+    <p class="chips">{% for s in data.partners.sister_projects %}<span>{{ s }}</span>{% endfor %}</p>
+  </div>
+</section>
+{% endblock %}

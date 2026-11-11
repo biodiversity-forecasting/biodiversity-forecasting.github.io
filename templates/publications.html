@@ -1,0 +1,15 @@
+{% extends "page.html" %}
+{% block after %}
+<section class="wrap prose-wrap pubs-wrap">
+  {% if nva_sample %}<p class="note sample-note">{{ 'Døme: publikasjonane her er henta frå Hotspots-prosjektet og viser berre korleis lista vil sjå ut.' if lang == 'nn' else 'Example: these publications are from the Hotspots project and only show how the list will look.' }}</p>{% endif %}
+  {% for year, items in publications | groupby('year') | reverse %}
+  <h2 class="pub-year">{{ year or '–' }}</h2>
+  <ul class="pub-list">
+    {% for p in items %}{% include "_pub.html" %}{% endfor %}
+  </ul>
+  {% endfor %}
+  {% for pid in (site.nva.projects or []) %}
+  <p><a class="arrow-link" href="https://nva.sikt.no/projects/{{ pid }}" rel="noopener">{{ ui.nva_link }}</a></p>
+  {% endfor %}
+</section>
+{% endblock %}

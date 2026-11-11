@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="nn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Senter for naturprognosar · Centre for Biodiversity Forecasting</title>
+<meta http-equiv="refresh" content="0; url={{ first }}/{{ 'index.html' if explicit else '' }}">
+<link rel="icon" type="image/png" href="img/logo/favicon.png">
+<script>
+  // Norskspråklege nettlesarar får nynorsk, andre får engelsk.
+  var l = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+  var target = /^(nn|nb|no)\b/i.test(l) ? 'nn' : 'en';
+  location.replace(target + '/{{ "index.html" if explicit else "" }}');
+</script>
+</head>
+<body>
+<p><a href="nn/{{ 'index.html' if explicit else '' }}">Senter for naturprognosar (nynorsk)</a> · <a href="en/{{ 'index.html' if explicit else '' }}">Centre for Biodiversity Forecasting (English)</a></p>
+</body>
+</html>

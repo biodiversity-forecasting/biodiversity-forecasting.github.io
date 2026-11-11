@@ -1,0 +1,13 @@
+{% extends "page.html" %}
+{% block after %}
+<section class="band band-tint">
+  <div class="wrap">
+    {% include "_areas.html" %}
+  </div>
+</section>
+{% if page.extra %}
+<article class="wrap prose-wrap">
+  <div class="prose">{{ page.extra | md }}</div>
+</article>
+{% endif %}
+{% endblock %}

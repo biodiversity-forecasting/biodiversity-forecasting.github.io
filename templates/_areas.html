@@ -1,0 +1,24 @@
+{# Dei fem forskingsområda som flyt: data → prognosar → mål → verktøy, med kunnskapsarenaen under. #}
+{% set areas = data.research.areas %}
+<ol class="areas-flow">
+  {% for a in areas if a.code != 'RA5' %}
+  <li class="area-card">
+    <a href="{{ page_url(a.key) }}">
+      <span class="area-icon" style="--icon: url('{{ rel('/img/icons/' ~ a.icon) }}')" aria-hidden="true"></span>
+      <span class="area-code">{{ a.code }}</span>
+      <span class="area-name">{{ a.name[lang] }}</span>
+      <span class="area-short">{{ a.short[lang] }}</span>
+    </a>
+  </li>
+  {% endfor %}
+</ol>
+{% for a in areas if a.code == 'RA5' %}
+<div class="area-card area-wide">
+  <a href="{{ page_url(a.key) }}">
+    <span class="area-icon" style="--icon: url('{{ rel('/img/icons/' ~ a.icon) }}')" aria-hidden="true"></span>
+    <span class="area-code">{{ a.code }}</span>
+    <span class="area-name">{{ a.name[lang] }}</span>
+    <span class="area-short">{{ a.short[lang] }}</span>
+  </a>
+</div>
+{% endfor %}

@@ -1,0 +1,14 @@
+# Tabellen «Kva klimafeltet har og naturfeltet manglar» (frå presentasjonen)
+caption: {nn: "Klimafeltet har eit system naturfeltet manglar", en: "The climate field has a system that nature lacks"}
+cols:
+  climate: {nn: Klima, en: Climate}
+  nature: {nn: Natur, en: Nature}
+status:
+  ok: {nn: På plass, en: In place}
+  partial: {nn: Delvis, en: Partly}
+  missing: {nn: Manglar, en: Missing}
+rows:
+  - {label: {nn: Prognosar for ulike val, en: Forecasts for different choices}, climate: ok, nature: missing}
+  - {label: {nn: Felles rekneskap, en: Common accounting}, climate: ok, nature: partial}
+  - {label: {nn: Indikatorar på tvers av sektorar og hav/land, en: Indicators across sectors and land/sea}, climate: ok, nature: missing}
+  - {label: {nn: Opne data, en: Open data}, climate: ok, nature: partial}

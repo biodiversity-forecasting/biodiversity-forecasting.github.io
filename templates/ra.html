@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% set area = (data.research.areas | selectattr('key', 'equalto', page.key) | list)[0] %}
+{% set people = data.people.groups | map(attribute='people') | sum(start=[]) %}
+{% set lead = (people | selectattr('name', 'equalto', area.leader) | list | first) %}
+{% block content %}
+<section class="page-head">
+  <div class="wrap page-head-inner">
+    <div class="page-head-text">
+      <p class="eyebrow"><a href="{{ page_url('research') }}">{{ page.parent_label }}</a> · {{ area.code }}</p>
+      <h1>{{ area.name[lang] }}</h1>
+      {% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+    </div>
+    <span class="area-icon area-icon-xl" style="--icon: url('{{ rel('/img/icons/' ~ area.icon) }}')" aria-hidden="true"></span>
+  </div>
+</section>
+<div class="wrap ra-layout">
+  <article class="prose">
+    {{ page.body_html | safe }}
+  </article>
+  <aside class="ra-aside">
+    {% if lead %}
+    <div class="person-mini">
+      <img src="{{ rel('/img/people/' ~ lead.photo) }}" alt="" width="96" height="96">
+      <div><p class="eyebrow">{{ ui.leader }}</p><strong>{{ lead.name }}</strong><span>{{ lead.org }}</span></div>
+    </div>
+    {% endif %}
+    <nav class="ra-nav" aria-label="{{ page.parent_label }}">
+      <p class="eyebrow">{{ page.parent_label }}</p>
+      <ol>
+        {% for a in data.research.areas %}
+        <li><a href="{{ page_url(a.key) }}"{% if a.key == page.key %} aria-current="page"{% endif %}><span>{{ a.code }}</span> {{ a.name[lang] }}</a></li>
+        {% endfor %}
+      </ol>
+    </nav>
+  </aside>
+</div>
+{% endblock %}
