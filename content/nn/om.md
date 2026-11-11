@@ -8,7 +8,7 @@ image_alt: Tre forskarar i feltklede diskuterer ute i skogen.
 description: Kva Senter for naturprognosar (CBF) skal gjera, korleis senteret er organisert, og kven som står bak.
 ---
 
-Senter for naturprognosar (Centre for Biodiversity Forecasting, CBF) skal gje offentlege styresmakter og private verksemder eit vitskapleg verktøysett for å vurdera, føreseia og rapportera korleis planlagde avgjerder om areal og naturressursar formar framtidas naturmangfald.
+Senter for naturprognosar (Centre for Biodiversity Forecasting, CBF) skal gje offentlege styresmakter og private verksemder eit vitskapleg verktøysett for å vurdera, føreseia og rapportera korleis planlagde avgjerder om areal og naturressursar formar framtidas naturmangfald. CBF er eitt av fire nasjonale [senter for berekraftig areal- og naturbruk](https://www.forskningsradet.no/forskningspolitikk-strategi/ltp/senter-barekraftig-areal-naturbruk/), som Klima- og miljødepartementet tok initiativ til og som Noregs forskingsråd finansierer saman med fleire departement frå 2026.
 
 Senteret er eit samarbeid mellom NTNU, UiT Noregs arktiske universitet, andre nasjonale og internasjonale forskingspartnarar og ei rekkje private og offentlege brukarpartnarar. Senteret vert leidd frå NTNU Gjærevollsenteret.
 
@@ -108,7 +108,7 @@ Senteret samarbeider òg med søsterprosjekta TRACE, InterPlay, AID og COAT.
 
 ## Fire senter for berekraftig areal- og naturbruk
 
-CBF er eitt av [fire nasjonale forskingssenter for berekraftig areal- og naturbruk](https://www.forskningsradet.no/nyheter/2026/fire-nye-forskningssentre-styrke-norges-arbeid-barekraftig-areal-naturbruk/) som Noregs forskingsråd finansierer frå 2026. Sentra skal utfylla kvarandre, og vi samarbeider tett med dei tre andre:
+CBF er eitt av [fire nasjonale forskingssenter for berekraftig areal- og naturbruk](https://www.forskningsradet.no/forskningspolitikk-strategi/ltp/senter-barekraftig-areal-naturbruk/) som Noregs forskingsråd finansierer frå 2026. Sentra skal utfylla kvarandre, og vi samarbeider tett med dei tre andre:
 
 <div class="cards" markdown="1">
 <div markdown="1">
