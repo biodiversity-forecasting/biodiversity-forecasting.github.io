@@ -3,15 +3,6 @@
 Tospråkleg nettside (nynorsk og engelsk) for Senter for naturprognosar / Centre for Biodiversity Forecasting.
 Sida er statisk: tekstane ligg som Markdown-filer, og GitHub byggjer og publiserer sida automatisk.
 
-## Kom i gang (éin gong)
-
-1. **Lag ein GitHub-organisasjon**, til dømes `cbf-ntnu` (github.com → profilbiletet → *Your organizations* → *New organization*, gratisplanen held).
-   Legg til fleire eigarar, slik at sida ikkje heng på éin person.
-2. **Lag eit nytt repository** i organisasjonen. Vil de ha testadressa `https://cbf-ntnu.github.io/`, kall det `cbf-ntnu.github.io`.
-   Ellers vert adressa `https://cbf-ntnu.github.io/<namn-på-repo>/`. Sida fungerer begge stader.
-3. **Last opp filene** i denne mappa (alt, også den skjulte mappa `.github`). Enklast: *Add file → Upload files*, eller med git.
-4. Gå til **Settings → Pages** og vel **Source: GitHub Actions**.
-5. Etter om lag eitt minutt ligg sida ute. Status ser de under fana **Actions**.
 
 ## Slik endrar de innhald
 
