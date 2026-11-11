@@ -5,8 +5,8 @@ title: Senter for naturprognosar
 description: Senter for naturprognosar (CBF) utviklar prognosar for korleis dagens bruk av areal på land og i sjø formar naturen i morgon – og gjer kunnskapen brukande for dei som tek avgjerdene.
 
 hero:
-  eyebrow: Senter for naturprognosar · 2026–2034
-  title: Prognosar for naturen
+  eyebrow: Eitt av fire senter for berekraftig areal- og naturbruk · 2026–2034
+  title: Senter for naturprognosar
   lead: Vi utviklar prognosar for korleis bruken av areal på land og i sjø formar naturen i morgon, og gjer kunnskapen brukande for dei som tek avgjerdene i dag.
   image_alt: Ei hand held ei glaskule framfor ein fjord. I kula står landskapet opp ned.
   buttons:
