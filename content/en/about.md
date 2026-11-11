@@ -8,7 +8,7 @@ image_alt: Three researchers in field clothing in discussion in a forest.
 description: What the Centre for Biodiversity Forecasting (CBF) will do, how it is organised, and who is behind it.
 ---
 
-The Centre for Biodiversity Forecasting (CBF) will give public authorities and private companies a science-based toolkit to assess, predict and report how planned decisions on land use and natural resources shape future biodiversity.
+The Centre for Biodiversity Forecasting (CBF) will give public authorities and private companies a science-based toolkit to assess, predict and report how planned decisions on land use and natural resources shape future biodiversity. CBF is one of four national [Centres for Sustainable Land Use and Nature Management](https://www.forskningsradet.no/forskningspolitikk-strategi/ltp/senter-barekraftig-areal-naturbruk/), initiated by the Ministry of Climate and Environment and funded through the Research Council of Norway together with several ministries, from 2026.
 
 The centre is a collaboration between NTNU, UiT The Arctic University of Norway, other national and international research partners, and a wide range of private and public user partners. It is led from the NTNU Gjærevoll Centre.
 
@@ -108,7 +108,7 @@ The centre also works with the sister projects TRACE, InterPlay, AID and COAT.
 
 ## Four centres for sustainable land use and nature management
 
-CBF is one of [four national research centres for sustainable land use and nature management](https://www.forskningsradet.no/nyheter/2026/fire-nye-forskningssentre-styrke-norges-arbeid-barekraftig-areal-naturbruk/) funded by the Research Council of Norway from 2026. The centres are designed to complement each other, and we work closely with the other three:
+CBF is one of [four national research centres for sustainable land use and nature management](https://www.forskningsradet.no/forskningspolitikk-strategi/ltp/senter-barekraftig-areal-naturbruk/) funded by the Research Council of Norway from 2026. The centres are designed to complement each other, and we work closely with the other three:
 
 <div class="cards" markdown="1">
 <div markdown="1">
