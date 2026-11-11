@@ -5,8 +5,8 @@ title: Centre for Biodiversity Forecasting
 description: The Centre for Biodiversity Forecasting (CBF) forecasts how today's use of land and sea shapes the nature of tomorrow – and makes that knowledge useful for decision-makers.
 
 hero:
-  eyebrow: Centre for Biodiversity Forecasting · 2026–2034
-  title: Forecasting nature
+  eyebrow: One of four Centres for Sustainable Land Use and Nature Management  · 2026–2034
+  title: Centre for Biodiversity Forecasting
   lead: We forecast how the use of land and sea shapes the nature of tomorrow, and make that knowledge useful for the people making decisions today.
   image_alt: A hand holding a glass sphere in front of a fjord. The landscape appears upside down inside the sphere.
   buttons:
