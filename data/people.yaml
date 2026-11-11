@@ -4,18 +4,18 @@ groups:
     title: {nn: Senterleiinga, en: Centre management}
     note: {nn: NTNU Gjærevollsenteret, en: NTNU Gjærevoll Centre}
     people:
-      - {name: Anders G. Finstad, photo: finstad.jpg, role: {nn: Senterleiar, en: Centre director}, org: NTNU Gjærevollsenteret, email: anders.finstad@ntnu.no}
-      - {name: Irja Ratikainen, photo: ratikainen.jpg, role: {nn: Nestleiar, en: Deputy director}, org: NTNU Gjærevollsenteret}
-      - {name: Sanna Majaneva, photo: majaneva.jpg, role: {nn: Fagkoordinator, en: Scientific coordinator}, org: NTNU Gjærevollsenteret}
-      - {name: Lisbeth Pedersen, photo: pedersen.jpg, role: {nn: Administrativ koordinator, en: Administrative coordinator}, org: NTNU Gjærevollsenteret}
+      - {name: Anders G. Finstad, photo: finstad.jpg, role: {nn: Senterleiar, en: Centre director}, org: NTNU Gjærevollsenteret, email: anders.finstad@ntnu.no, url: "https://www.ntnu.no/ansatte/anders.finstad"}
+      - {name: Irja Ratikainen, photo: ratikainen.jpg, role: {nn: Nestleiar, en: Deputy director}, org: NTNU Gjærevollsenteret, url: "https://www.ntnu.no/ansatte/irja.i.ratikainen"}
+      - {name: Sanna Majaneva, photo: majaneva.jpg, role: {nn: Fagkoordinator, en: Scientific coordinator}, org: NTNU Gjærevollsenteret, url: "https://www.ntnu.no/ansatte/sannama"}
+      - {name: Lisbeth Pedersen, photo: pedersen.jpg, role: {nn: Administrativ koordinator, en: Administrative coordinator}, org: NTNU Gjærevollsenteret, url: "https://www.ntnu.no/ansatte/lisbeth.pedersen"}
   - id: ra
     title: {nn: Leiarar for forskingsområda, en: Research area leads}
     people:
       - {name: Nigel Yoccoz, photo: yoccoz.jpg, role: {nn: "RA1 Prognosar", en: "RA1 Forecasts"}, org: UiT Noregs arktiske universitet}
-      - {name: Aline Lee, photo: lee.jpg, role: {nn: "RA2 Indikatorar og rapportering", en: "RA2 Indicators and reporting"}, org: NTNU Gjærevollsenteret}
+      - {name: Aline Lee, photo: lee.jpg, role: {nn: "RA2 Indikatorar og rapportering", en: "RA2 Indicators and reporting"}, org: NTNU Gjærevollsenteret, url: "https://www.ntnu.no/ansatte/aline.m.lee"}
       - {name: Marianne Ryghaug, photo: ryghaug.jpg, role: {nn: "RA3 Frå prognose til handling", en: "RA3 From forecast to action"}, org: SINTEF Community}
       - {name: Bob O’Hara, photo: ohara.jpg, role: {nn: "RA4 Informasjonsarenaen", en: "RA4 Information arena"}, org: NTNU Institutt for matematiske fag}
-      - {name: Ivar Herfindal, photo: herfindal.jpg, role: {nn: "RA5 Kunnskapsarenaen", en: "RA5 Knowledge arena"}, org: NTNU Gjærevollsenteret}
+      - {name: Ivar Herfindal, photo: herfindal.jpg, role: {nn: "RA5 Kunnskapsarenaen", en: "RA5 Knowledge arena"}, org: NTNU Gjærevollsenteret, url: "https://www.ntnu.no/ansatte/ivar.herfindal"}
   - id: partners
     title: {nn: Partnarinstitusjonar i leiargruppa, en: Partner institutions in the management group}
     people:
