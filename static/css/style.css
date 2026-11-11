@@ -388,3 +388,8 @@ body.variant-dark {
 @media (min-width: 1180px) { .pubs-wrap { margin-left: max(0px, calc((100vw - var(--maxw)) / 2)); } }
 .pub-grid { display: grid; gap: 0 32px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 .sample-note { background: var(--bg-lime); border-left: 4px solid var(--cbf-lime); padding: 12px 16px; border-radius: var(--radius); font-size: 0.95rem; }
+
+/* Gjør navn med linker pene */
+.person-link { display: flex; flex-direction: column; color: inherit; text-decoration: none; }
+.person-link:hover strong { text-decoration: underline; }
+.person-link:hover img { outline: 3px solid var(--cbf-lime); outline-offset: 3px; }
