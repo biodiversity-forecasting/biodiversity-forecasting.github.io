@@ -2,7 +2,7 @@
 # base_url og domain fyller de inn når domenet er klart (t.d. https://naturprognosar.no).
 base_url: ""
 domain: ""          # skriv domenet her (utan https://) når det er klart; då vert CNAME-fila laga automatisk
-variant: dark       # dark = djupblå toppfelt og talband, light = lyse flater
+variant: light       # dark = djupblå toppfelt og talband, light = lyse flater
 fonts: local        # local = sjølvhosta Open Sans (lastast ned i GitHub Actions)
 
 languages: [nn, en]
