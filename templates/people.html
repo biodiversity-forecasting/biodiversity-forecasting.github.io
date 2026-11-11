@@ -8,8 +8,10 @@
     <ul class="people-grid">
       {% for p in g.people %}
       <li class="person">
+        {% if p.url %}<a class="person-link" href="{{ p.url }}">{% endif %}
         <img src="{{ rel('/img/people/' ~ p.photo) }}" alt="" width="400" height="400" loading="lazy">
         <strong>{{ p.name }}</strong>
+        {% if p.url %}</a>{% endif %}
         {% if p.role %}<span class="person-role">{{ p.role[lang] }}</span>{% endif %}
         <span class="person-org">{{ p.org }}</span>
       </li>
