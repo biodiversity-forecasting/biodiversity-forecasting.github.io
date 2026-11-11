@@ -19,7 +19,7 @@ Alt kan gjerast i nettlesaren på github.com: opna fila, trykk på blyanten, skr
 | Meny, knappetekstar, kontaktadresse, LinkedIn | `site.yaml` |
 | Farger og utsjånad | `static/css/style.css` |
 
-### Skriva eit nyhende
+### Skrive ein nyheit
 
 Lag ei ny fil i `content/nn/aktuelt/`, til dømes `ny-stipendiat.md`:
 
@@ -31,7 +31,7 @@ parent_label: Aktuelt
 title: Ny stipendiat i CBF
 date: 2027-02-01
 lead: Ei kort ingress som vert vist øvst.
-description: Ei setning som vert vist i lista over nyhende.
+description: Ei setning som vert vist i lista over nyheiter.
 image: photos/feltarbeid.jpg
 image_alt: Kort skildring av biletet.
 ---
@@ -40,7 +40,7 @@ Sjølve teksten skriv de her, med vanleg Markdown: **feit**, *kursiv*, [lenkje](
 ```
 
 Den engelske versjonen legg de i `content/en/news/` med **same `key`**. Då lenkjar språkknappen mellom dei.
-Nyhende utan engelsk versjon fungerer òg; då vert språkknappen berre borte på den sida.
+Nyheiter utan engelsk versjon fungerer òg; då vert språkknappen berre borte på den sida.
 
 Lenkjer og bilete inne i tekstane skriv de med stiar som byrjar med `/`, til dømes `/nn/bli-med/` eller `/img/photos/smalom.jpg`.
 
